@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Canvas Name="DrawingCanvas" Background="White" MouseDown="DrawingCanvas_MouseDown" MouseMove="DrawingCanvas_MouseMove" MouseUp="DrawingCanvas_MouseUp"/>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10">
+            <TextBlock Text="Цвет кисти:"/>
+            <ComboBox Name="BrushColorComboBox" SelectionChanged="BrushColorComboBox_SelectionChanged">
+                <ComboBoxItem Content="Черный" Tag="Black"/>
+                <ComboBoxItem Content="Красный" Tag="Red"/>
+                <ComboBoxItem Content="Зеленый" Tag="Green"/>
+                <ComboBoxItem Content="Синий" Tag="Blue"/>
+            </ComboBox>
+
+            <TextBlock Text="Размер кисти:"/>
+            <Slider Name="BrushSizeSlider" Minimum="1" Maximum="50" Value="5" TickFrequency="1" IsSnapToTickEnabled="True"/>
+
+            <TextBlock Text="Режим работы:"/>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Name="DrawMode" Content="Рисование" GroupName="Mode" Checked="Mode_Checked"/>
+                <RadioButton Name="EditMode" Content="Редактирование" GroupName="Mode" Checked="Mode_Checked"/>
+                <RadioButton Name="DeleteMode" Content="Удаление" GroupName="Mode" Checked="Mode_Checked"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

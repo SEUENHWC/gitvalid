@@ -43,6 +43,30 @@ namespace WpfApp2
         {
             this.Close();
         }
-    }
+        private void MenuItem_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (sender is MenuItem menuItem)
+            {
+                StatusText.Text = menuItem.ToolTip?.ToString() ?? menuItem.Header.ToString();
+            }
+        }
 
+        private void MenuItem_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            StatusText.Text = "Готово";
+        }
+
+        private void Button_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                StatusText.Text = button.ToolTip?.ToString() ?? button.Content.ToString();
+            }
+        }
+
+        private void Button_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            StatusText.Text = "Готово";
+        }
+    }
 }

@@ -14,23 +14,53 @@
         </Grid.RowDefinitions>
 
         <Menu Grid.Row="0" Name="MainMenu">
-            <MenuItem Header="Файл">
-                <MenuItem Header="Закрыть" Click="CloseMenuItem_Click" ToolTip="Закрыть приложение"/>
+            <MenuItem Header="Файл" MouseEnter="MenuItem_MouseEnter" MouseLeave="MenuItem_MouseLeave">
+                <MenuItem Header="Закрыть" Click="CloseMenuItem_Click"
+                          ToolTip="Закрыть приложение"
+                          MouseEnter="MenuItem_MouseEnter" 
+                          MouseLeave="MenuItem_MouseLeave"/>
             </MenuItem>
-            <MenuItem Header="Настройки">
-                <MenuItem Header="Красный" Click="ChangeColor_Click" ToolTip="Сменить цвет на красный" Tag="Red"/>
-                <MenuItem Header="Зеленый" Click="ChangeColor_Click" ToolTip="Сменить цвет на зеленый" Tag="Green"/>
-                <MenuItem Header="Синий" Click="ChangeColor_Click" ToolTip="Сменить цвет на синий" Tag="Blue"/>
+            <MenuItem Header="Настройки" MouseEnter="MenuItem_MouseEnter" MouseLeave="MenuItem_MouseLeave">
+                <MenuItem Header="Красный" Click="ChangeColor_Click" ToolTip="Сменить цвет на красный" Tag="Red"
+                          MouseEnter="MenuItem_MouseEnter" 
+                          MouseLeave="MenuItem_MouseLeave"/>
+                <MenuItem Header="Зеленый" Click="ChangeColor_Click" ToolTip="Сменить цвет на зеленый" Tag="Green"
+                          MouseEnter="MenuItem_MouseEnter" 
+                          MouseLeave="MenuItem_MouseLeave"/>
+                <MenuItem Header="Синий" Click="ChangeColor_Click" ToolTip="Сменить цвет на синий" Tag="Blue"
+                          MouseEnter="MenuItem_MouseEnter" 
+                          MouseLeave="MenuItem_MouseLeave"/>
             </MenuItem>
-            <MenuItem Header="Помощь">
-                <MenuItem Header="О разработчике" Click="AboutMenuItem_Click" ToolTip="Информация о разработчике"/>
+            <MenuItem Header="Помощь" MouseEnter="MenuItem_MouseEnter" MouseLeave="MenuItem_MouseLeave">
+                <MenuItem Header="О разработчике" Click="AboutMenuItem_Click"
+                          ToolTip="Информация о разработчике"
+                          MouseEnter="MenuItem_MouseEnter" 
+                          MouseLeave="MenuItem_MouseLeave"/>
             </MenuItem>
         </Menu>
 
-        <ToolBar Grid.Row="1" Name="MainToolBar" Margin="0,0,603,280">
-            <Button Click="ChangeColor_Click" Tag="Red" ToolTip="Сменить цвет на красный">Красный</Button>
-            <Button Click="ChangeColor_Click" Tag="Green" ToolTip="Сменить цвет на зеленый">Зеленый</Button>
-            <Button Click="ChangeColor_Click" Tag="Blue" ToolTip="Сменить цвет на синий">Синий</Button>
+        <ToolBar Grid.Row="1" Name="MainToolBar" Margin="0,0,124,280">
+            <Button Click="ChangeColor_Click">
+                <Image Source="C:\Users\Alex\Desktop\fff\WpfApp2\images\paper_paper_recycling_document_file_icon_260359.png"></Image>
+            </Button>
+            <Separator/>
+            <Button>
+                <Image Source="C:\Users\Alex\Desktop\fff\WpfApp2\images\1492790960-37option_84248.png"></Image>
+                
+            </Button>            <Separator/>
+            <Button>
+                <Image Source="C:\Users\Alex\Desktop\fff\WpfApp2\images\icon_icon_245471.png"></Image>
+
+            </Button>
+            <Button Click="ChangeColor_Click" Tag="Red" ToolTip="Сменить цвет на красный">
+                <Image Source="C:\Users\Alex\Desktop\fff\WpfApp2\images\Tourist-cabin-dnt-staffed-lodge.svg.png"></Image>
+            </Button>
+            <Button Click="ChangeColor_Click" Tag="Green" ToolTip="Сменить цвет на зеленый">
+                <Image Source="C:\Users\Alex\Desktop\fff\WpfApp2\images\1hsw21ncoh20enc5mhcjbmfjs7qnomh9.png"></Image>
+            </Button>
+            <Button Click="ChangeColor_Click" Tag="Blue" ToolTip="Сменить цвет на синий">
+                <Image Source="C:\Users\Alex\Desktop\fff\WpfApp2\images\76543.png"></Image>
+            </Button>
         </ToolBar>
 
         <StatusBar Grid.Row="2" Name="StatusBar">
